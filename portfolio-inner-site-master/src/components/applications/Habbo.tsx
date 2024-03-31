@@ -25,7 +25,7 @@ const WebApp: React.FC<WebAppProps> = (props) => {
             onHeightChange={setHeight}
         >
             <iframe
-                src="https://www.habbo.pro"
+                src="https://bobba.io"
                 width={width}
                 height={height}
                 title="habbo"
