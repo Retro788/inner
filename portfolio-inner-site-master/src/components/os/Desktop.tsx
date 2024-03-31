@@ -265,6 +265,7 @@ const Desktop: React.FC<DesktopProps> = (props) => {
             <div
                 style={Object.assign({}, styles.shortcutContainer, {
                     left: 16 + i * 104,
+                    bottom: -600,
                 })}
                 key={shortcut.shortcutName}
             >
@@ -277,6 +278,7 @@ const Desktop: React.FC<DesktopProps> = (props) => {
         );
     })}
 </div>
+
 
 
             <Toolbar
