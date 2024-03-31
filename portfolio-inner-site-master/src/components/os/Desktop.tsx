@@ -72,7 +72,7 @@ const APPLICATIONS: {
     },
     minecraft: {
         key: 'minecraft',
-        name: 'Minecraft',
+        name: '',
         shortcutIcon: 'minecraft',
         component: minecraft,
     },
@@ -260,23 +260,25 @@ const Desktop: React.FC<DesktopProps> = (props) => {
                 );
             })}
             <div style={styles.shortcuts}>
-                {shortcuts.map((shortcut, i) => {
-                    return (
-                        <div
-                            style={Object.assign({}, styles.shortcutContainer, {
-                                top: i * 104,
-                            })}
-                            key={shortcut.shortcutName}
-                        >
-                            <DesktopShortcut
-                                icon={shortcut.icon}
-                                shortcutName={shortcut.shortcutName}
-                                onOpen={shortcut.onOpen}
-                            />
-                        </div>
-                    );
+    {shortcuts.map((shortcut, i) => {
+        return (
+            <div
+                style={Object.assign({}, styles.shortcutContainer, {
+                    left: 16 + i * 104,
                 })}
+                key={shortcut.shortcutName}
+            >
+                <DesktopShortcut
+                    icon={shortcut.icon}
+                    shortcutName={shortcut.shortcutName}
+                    onOpen={shortcut.onOpen}
+                />
             </div>
+        );
+    })}
+</div>
+
+
             <Toolbar
                 windows={windows}
                 toggleMinimize={toggleMinimize}
